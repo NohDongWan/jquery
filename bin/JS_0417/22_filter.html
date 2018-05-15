@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!--  기본필터 메서드
+		filter() : 문서 객체를 필터링합니다.
+		형식) $(selector).filter(selector);
+			 $(selector).filter(function(){});
+		
+		-->
+<script src = "../js/jquery-3.3.1.js"></script>
+
+	<script>
+	$(document).ready(function(){
+		//$('h3:evne').css({ });			//와 같은의미로 filter() 메서드로 수행할 수 있다.
+			$('h3').filter(':even')
+			.css({
+				backgroundColor : 'black',
+				color : 'white'
+			});
+	});
+	</script>
+
+</head>
+<body>
+	<h3>Header-0</h3>
+	<h3>Header-1</h3>
+	<h3>Header-2</h3>
+	<h3>Header-3</h3>
+	<h3>Header-4</h3>
+	<h3>Header-5</h3>
+</body>
+</html>

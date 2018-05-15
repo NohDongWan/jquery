@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--
+	1. CDN 방식으로 가장 최신 버전을 불러옵니다. -->
+	<script src = "http://code.jquery.com/jquery-latest.js"></script>
+	
+<!--  
+	2. 직접 내려받아 설치한 경우 불러옵니다.
+	다운받는 사이트 : http://code.jquery.com/접속
+	3.x 버전 선택 후 오른쪽 마우스 버튼 클릭 후 '다른 이름으로 링크저장'
+	또는 '다른 이름으로 대상 저장' 선택
+-->
+
+	<script src = "../js/jquery-3.3.1.js"></script>			<!--상대주소로 jquery 를찾아간다.  -->
+	
+	<script>
+	//위 메서드는 다음과 비슷한 기능을 수행합니다.
+	window.onload = function(){
+		alert('window.onload;');			//이미 돔트리가만들어져서 내가 돔트리에있는 객체들을 쓸수 있는 시점이되면 그때 onload 해줘라!
+	};
+  	
+  	/* 
+  		문서가 준비되면 매개변수로 넣은 콜백 함수를 실행하라는 의미 입니다.
+  		jQuery 이벤트 메서드 중 하나 입니다.
+  		document 객체의 ready 이벤트 연결을 의미합니다.  	
+  	
+  		작성법
+  			1. $(document).ready();
+  			2. 1번 작성 후 ready()의 () 사이에 커서를 놓는다.
+  			3. function(){}를 작성 후 {} 사이에 커서를 놓고 엔터를 누른 뒤 코드 작성
+  	*/
+
+  	
+  	$(document).ready(function (){		  //저위에 두문장이랑 같은뜻 들..바디에안써줘도된다이렇게쓰면
+  			alert("안녕하세요");
+  	});
+  	
+  	
+  	</script>
+</head>
+<body>
+
+</body>
+</html>

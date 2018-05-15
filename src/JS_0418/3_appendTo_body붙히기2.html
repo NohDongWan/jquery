@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- $() 메소드로 문서 객체를 생성  -->
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function(){
+		$('<img>').attr('src',' koala.jpg')
+				  .attr('width','200').appendTo('body');		//바디에 붙힌다.
+		$('<img>').attr('src',' Desert.jpg')
+				  .attr('width','200').appendTo('body');
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

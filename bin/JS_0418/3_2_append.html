@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!--	
+	$(A).append(B) : B를 A 의 뒷부분에추가합니다.
+	$(A).prepend(B) : B를 A 의 앞부분에 추가합니다.
+	
+	형식) $(selector).append(content, content,...);
+		  $(selector).append(function(index){});
+  -->
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function() {
+				//변수를선언합니다.
+				var h1 = '<h1>오늘은</h1>';
+				var h2 = '<h1>기다리던</h1>';
+				var h3 = '<h1>금요일입니다</h1>'
+				var h4 = '<h1>드디어</h1>'
+				var h5 = '<h1>야구장에</h1>'
+				//문서 객체를 추가합니다.
+				$('div').append(h1,h2,h1,h2)		//div 태그 안에서 맨뒤에
+				$('div').prepend(h3);				//div 태그 안에서 맨앞에
+				$('div').after(h4)					//atfer 은 div  태그 밖에 생기고
+				$('div').before(h5);				//div 태그 밖에 맨앞에
+			});
+</script>
+</head>
+<body>
+	<div>내 뒤에 붙거라</div>
+</body>
+</html>

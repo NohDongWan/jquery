@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "../js/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		$('li:nth-child(2n+1)').css('background','brown');
+		$('li:nth-child(2n)').css('background','red');
+		$('ul>li').css('display','inline-block').css('width','100px').css('height','60px')
+					.css('line-height','60px').css('text-align','center').css('float','left')
+		$('p').css('clear','both')
+		$('li:first-child').css('border-radius','20px 0 0 20px')
+		$('li:last-child').css('border-radius','0 20px 20px 0')
+		
+		
+	})
+
+
+</script>
+</head>
+<body>
+	<ul>
+		<li>First</li>
+		<li>Second</li>
+		<li>Third</li>
+		<li>Fourth</li>
+		<li>Fifth</li>
+		<li>Sixth</li>
+		<li>Seventh</li>
+	</ul>
+	<p>꿈틀이입니다</p>
+</body>
+</html>

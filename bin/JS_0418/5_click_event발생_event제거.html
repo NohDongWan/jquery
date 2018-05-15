@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function(){
+		$('h1').click(function(){
+			alert('이벤트 발생')
+			$(this).html('Click');		//this 이벤트가 발생한 개체
+			
+			
+			//이벤트를 제거합니다
+			//click 로바뀐것은 클랙해도 이벤트가 발생하지 않습니다.
+			$(this).off();
+		})
+	})
+	
+</script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1>Header-1</h1>
+	<h1>Header-2</h1>
+</body>
+</html>

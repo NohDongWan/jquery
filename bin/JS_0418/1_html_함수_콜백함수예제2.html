@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function() {
+		$('h1').html(function(index, item) {
+			return '★' + item + index + '★';
+		})
+	})
+</script>
+
+</head>
+<body>
+	<h1>월요일</h1>
+	<h1>화요일</h1>
+	<h1>수요일</h1>
+</body>
+</html>

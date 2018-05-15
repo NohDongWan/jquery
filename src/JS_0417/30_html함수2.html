@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- html() : 문서 객체 내부의 글자와 관련된 모든 기능을 수행합니다  -->
+<!-- 문서 객체의 내부 추가
+	html() : 문서 객체 내부의 글자와 관련된 모든 기능을 수행합니다.
+				(HTML태그인식)
+	text() : 문서 객체 내부의 글자와 관련된 모든 기능을 수행합니다.
+	
+	형식)
+		1.$(selector).html(value);
+		2.$(selector).html(function(index,html){})
+  -->
+<script src="../js/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		$('div').html('<h1>html()메서드 입니다.</h1>');		//텍스트는 태그는 인식이안된다.
+	})
+
+</script>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+</html>

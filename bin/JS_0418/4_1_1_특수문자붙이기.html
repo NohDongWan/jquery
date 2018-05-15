@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!--	
+		jquery 로 이벤트를 연결하는 가장 기본적인 방법은 on() 메서드를 사용
+		on() 메서드의 두 가지 형태
+		1. $(selector).on('eventName)',function(event){})
+		2. $(selector).on(object)
+	-->
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function(){
+		var m = ['★','※','♣'] 
+		$('h1').on('click',function(){
+			$(this).html(function(index,item){
+				return item + m[$(this).index()]; //item 에 값이 하나씩 뒤에 추가되서나오는거다 별하나만 따로추가하는게아니라
+			})
+		})
+	});
+</script>
+</head>
+<body>
+	<h1>Header(0)</h1>
+	<h1>Header(1)</h1>
+	<h1>Header(2)</h1>
+</body>
+</html>

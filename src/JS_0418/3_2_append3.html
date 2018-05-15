@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!--	
+	$(A).append(B) : B를 A 의 뒷부분에추가합니다.
+	$(A).prepend(B) : B를 A 의 앞부분에 추가합니다.
+	
+	형식) $(selector).append(content, content,...);
+		  $(selector).append(function(index){});
+  -->
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function() {
+		$('img').attr('width','200')
+				//문서 객체를 추가합니다.
+			setInterval(function(){
+				
+		$('body').append($('img:first'));
+			},1500)
+				
+				
+		/* $('img').first().appendTo($('body'));
+			},900) */
+		});
+</script>
+</head>
+<body>
+	<img src = Desert.jpg>
+	<img src = koala.jpg>
+	<img src = Dog.jpg>
+	<img src = Cat.jpg>
+	<img src = bear.jpg>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+		$(document).ready(function(){
+		$('#wrap').on('click','h1',function(){		//부모영역을잡아주고 그안에 h1 을 클릭
+			var length = $('h1').length;//h1의 갯수
+			var targetHTML = $(this).html();
+			
+			//id 가 "wrap" 인 div 태그 안의 마지막 위치에 append 안의 내용
+			$('#wrap')
+			.append('<h1>' + length + '-' + targetHTML+ '</h1>');
+			
+		})
+	})
+</script>
+</head>
+<body>
+	<div id = "wrap">
+		<h1>Header1</h1>
+	</div>
+</body>
+</html>

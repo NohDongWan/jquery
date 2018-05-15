@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- $() 메소드로 문서 객체를 생성  -->
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+
+	$(document).ready(function(){
+		$('<img>',{
+			src : 'koala.jpg',
+			width : 350,
+			height : 250,
+			onclick : function(){alert('나는 펭귄입니다2.')}	,			
+			click : function(){alert('나는 펭귄입니다.')}					//이게맞는거다. click event 에서 함수적용  객체니깐 클릭을써야된다.
+		}).appendTo('body');;
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

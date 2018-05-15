@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = '../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function(){
+		//img 태그의 속성 'width' 의 값을 200으로 선정합니다.
+		$('img').attr('width',
+				function(index) {
+			return (index + 1) * 100;
+		});
+	})
+
+</script>
+</head>
+<body>
+	<img src = "image1.png">
+	<img src = "Desert.jpg">
+	<img src = "koala.jpg">
+</body>
+</html>

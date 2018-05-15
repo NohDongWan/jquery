@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<style>
+	.high-light{background:orange}
+	.append::before{content : '※'}
+	.append::after{content : '※'}
+	</style>
+<!--  
+		jQuery 외에 여러 플러그인을 사용할 때 $ 식별자가 충돌이
+		발생할 수 있습니다.( ex)부트스트랩)
+		이런 충동을 방지하기 위해 noConflict()메소드를 사용합니다.
+		그러면 더 이상 jQuery 의 식별자로 $를 사용할 수 없습니다.
+-->
+
+	<script src = "../js/jquery-3.3.1.js"></script>
+	<script>	
+	$.noConflict();	//더 이상 jQuery 의 식별자로 $를 사용할 수 없다
+	var j = jQuery;		//jQuery 객체를 다른 변수에 저장해서 사용
+	
+	//jquery 를 사용합니다
+	
+	j(document).ready(function(){
+		alert("충돌 방지 예제")
+		j('h1').addClass('append');
+	})
+	
+	window.jQuery(document).ready(function(){
+		alert('jquery(document).ready();');
+	})
+	
+	jQuery(document).ready(function(){
+		alert('jquery(document).ready();');
+	})
+	
+	
+	
+	</script>
+	
+</head>
+<body>
+	<h1 class = "high-light">item - 0</h1>
+</body>
+</html>

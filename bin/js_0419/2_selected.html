@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function(){
+		$('select').change(function(){
+			if($(this).val() == "10대")				//this 도 되고 :selected
+				{
+					$('input').attr("disabled",'false')			
+						.val("")
+				}
+			//ex)
+			else{//10대가 아닌경우
+			$('input').removeAttr('disabled').val("");	
+			}
+		})
+	})
+</script>
+</head>
+<body>
+	<p>
+		나이 : <select name=age>
+
+			<option value=선택해주세요 selected>선택해주세요</option>
+			<option value=10대>10대</option>
+			<option value=10대>20대</option>
+			<option value=10대>30대</option>
+			<option value=10대>40대</option>
+		</select>
+	</p>
+	<p>
+		좋아하는 술 : <input type="text">
+</body>
+</html>

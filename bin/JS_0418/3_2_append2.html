@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!--	
+	$(A).append(B) : B를 A 의 뒷부분에추가합니다.
+	$(A).prepend(B) : B를 A 의 앞부분에 추가합니다.
+	
+	형식) $(selector).append(content, content,...);
+		  $(selector).append(function(index){});
+  -->
+<script src='../js/jquery-3.3.1.js'></script>
+<script>
+	$(document).ready(function() {
+				//문서 객체를 추가합니다.
+				$('div').append($('h1'));		//h1태그를 div 뒤에 붙힌다.
+			});
+</script>
+</head>
+<body>
+	<h1>HEADER1</h1>
+	<hr>
+	<div>이곳에 붙어라 header야</div>
+	<hr>
+</body>
+</html>

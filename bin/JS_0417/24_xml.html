@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- find() 메소드 : 특정 태그를 선택합니다.
+	$.parseMML() 메소드 : 문자열을 XML 문서 객체로  변경합니다.
+	text() 메소드 : 태그 사이의 글자를 가져옵니다.
+ -->
+<script src = '../js/jquery-3.3.1.js'></script>
+<script>
+	//변수를 선언합니다.
+	var xml = '';
+	xml += '<friends>';
+	xml += '	<friend>';
+	xml += '		<name>오바바</name>';
+	xml += '		<language>영어</language>';
+	xml += '	</friend>';
+
+	xml += '	<friend>';
+	xml += '		<name>트럼프</name>';
+	xml += '		<language>미국어</language>';
+	xml += '	</friend>';
+	
+	xml += '	<friend>';
+	xml += '		<name>시진핑</name>';
+	xml += '		<language>중국어</language>';
+	xml += '	</friend>';
+	
+	xml += '</friends>';
+	
+	$(document).ready(function(){
+		
+		//문자열을 XML 문서 객체로 변경합니다.
+		var xmlDoc = $.parseXML(xml);		//parseXML : 문자열을 xml 문서 객체로 만들어주는애다
+		
+		//$(xmlDoc) : 문서 객체 xmlDoc 을 $() 메소드에 넣어 사용합니다.
+		//friend 태그는 세 개 이므로 each() 메서드를 사용합니다.
+		$(xmlDoc).find('friend').each(function(index){
+			//변수를 선언합니다.
+			var output ='';
+			output += '<div>'
+			output += '<p>친구' + (index+1);
+			output += '<h1>' + $(this).find('name').text() + '</h1>';
+			output += '<p>' + $(this).find('language').text()
+			output += '<hr>'
+			output += '</div>'
+			document.body.innerHTML += output;	
+		});
+	});
+</script>
+</head>
+<body>
+
+</body>
+</html>

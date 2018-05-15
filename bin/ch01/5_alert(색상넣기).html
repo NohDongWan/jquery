@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.3.1.js"></script>
+
+<script>
+	$(document).ready(function() {
+		var color = prompt("색상을입력하세요","white"); 
+	 	$('h1:nth-child(2)').css('color',color);
+//		$('p').css('color','blue');
+//		$('h1#target').css('color',color);	//id 가 타겟값을가지고있는 h1 을 지목	
+	})
+</script>
+</head>
+<body>
+	<h1>Header-0</h1>
+	<h1 id = target>'#target' : 카멜레온</h1>
+	<h1>Header-2</h1>	
+
+</body>
+</html>
